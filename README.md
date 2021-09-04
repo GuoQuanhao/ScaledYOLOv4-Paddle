@@ -1,6 +1,8 @@
 # ScaledYOLOv4-Paddle
 A reproduction of ScaledYOLOv4 by PaddlePaddle
 
+AIStudio项目地址：[ScaledYOLOv4-Paddle](https://aistudio.baidu.com/aistudio/projectdetail/2337927?forkThirdPart=1)
+
 ## 数据文件准备
 
 数据集已挂载至aistudio项目中，如果需要本地训练可以从这里下载[数据集](https://aistudio.baidu.com/aistudio/datasetdetail/105347)，和[标签](https://aistudio.baidu.com/aistudio/datasetdetail/103218)文件
@@ -39,6 +41,8 @@ python train_multi_gpu.py --batch-size 12 --img 896 896 --data coco.yaml --cfg y
 ```
 多卡训练项目已提交至[脚本任务ScaledYOLOv4](https://aistudio.baidu.com/aistudio/clusterprojectdetail/2326709)
 
+多卡训练日志以及模型可在[此处](https://pan.baidu.com/s/1JIW1FtFNymwK4gP_VNDVPA)下载，提取码：mxz8 
+
 ### 验证
 确保已安装`pycocotools`
 ```
@@ -70,8 +74,10 @@ python detect.py
 
 ![](https://ai-studio-static-online.cdn.bcebos.com/97f67f7cb9744b37ac95cc4a5566244c217b4588b6574fccb229e21435264989)
 
-![](https://ai-studio-static-online.cdn.bcebos.com/96b2a54f471e457d9a1a294d292f03945e4cc912f41d4072bbb1453a5c96739b)
-![](https://ai-studio-static-online.cdn.bcebos.com/79da74ec819647aba31f984b82aa70c1ffa48884203540ea8fdf584f21479120)
+<div align="center">
+  <img src="https://ai-studio-static-online.cdn.bcebos.com/96b2a54f471e457d9a1a294d292f03945e4cc912f41d4072bbb1453a5c96739b" width="400"/><img src="https://ai-studio-static-online.cdn.bcebos.com/64c46191443d42109778ec19a343a1adf3cd9e3adf4e44a3aae4896944b2a0f5" width="400"/>
+</div>
 
-![](https://ai-studio-static-online.cdn.bcebos.com/64c46191443d42109778ec19a343a1adf3cd9e3adf4e44a3aae4896944b2a0f5)
-![](https://ai-studio-static-online.cdn.bcebos.com/00d648e60896462aa25fe3c2a468715cf653b81abb8f4e718a02d999799f469f)
+<div align="center">
+  <img src="https://ai-studio-static-online.cdn.bcebos.com/79da74ec819647aba31f984b82aa70c1ffa48884203540ea8fdf584f21479120" width="400"/><img src="https://ai-studio-static-online.cdn.bcebos.com/00d648e60896462aa25fe3c2a468715cf653b81abb8f4e718a02d999799f469f" width="400"/>
+</div>
