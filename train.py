@@ -249,7 +249,6 @@ def train(hyp, opt, tb_writer=None):
         if ema is not None:
             ema.update_attr(model, include=['yaml', 'nc', 'hyp', 'gr', 'names', 'stride'])
         final_epoch = epoch + 1 == epochs
-        '''
         if not opt.notest or final_epoch:  # Calculate mAP
             results, maps, times = test.test(opt.data,
                                                 batch_size=batch_size,
@@ -296,12 +295,10 @@ def train(hyp, opt, tb_writer=None):
                 if best_fitness == fi:
                     paddle.save(ckpt, best)
                 del ckpt
-        '''
         # end epoch ----------------------------------------------------------------------------------------------------
     # end training
 
     # Strip optimizers
-    '''
     n = ('_' if len(opt.name) and not opt.name.isnumeric() else '') + opt.name
     fresults, flast, fbest = 'results%s.txt' % n, wdir + 'last%s.pdparams' % n, wdir + 'best%s.pdparams' % n
     for f1, f2 in zip([wdir + 'last.pdparams', wdir + 'best.pdparams', 'results.txt'], [flast, fbest, fresults]):
@@ -316,7 +313,6 @@ def train(hyp, opt, tb_writer=None):
     print('%g epochs completed in %.3f hours.\n' % (epoch - start_epoch + 1, (time.time() - t0) / 3600))
 
     return results
-    '''
 
 
 if __name__ == '__main__':
